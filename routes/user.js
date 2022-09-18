@@ -2,13 +2,13 @@ import express from "express";
 import User from "../model/UserMode.js";
 const route = express.Router();
 
-// Get
+// /user => Get
 route.get("/user", async (req, res) => {
   const users = await User.find();
   res.json(users);
 });
 
-// Post
+// /user => Post
 route.post("/user", async (req, res) => {
   console.log(req.body);
   const newUser = new User({

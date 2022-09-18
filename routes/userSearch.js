@@ -2,7 +2,7 @@ import express from "express";
 import User from "../model/UserMode.js";
 const route = express.Router();
 
-//Get user by id
+///UserSearch/usrename => Get user by id
 route.get("/userSearch/:username", async (req, res) => {
   const username = req.params.username;
   console.log(username);
